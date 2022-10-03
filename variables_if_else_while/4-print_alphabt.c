@@ -4,18 +4,18 @@
 (*
 * Return: 0
 */
+
 int main(void)
 {
-char c = 'a';
+char letter;
 
-while (c <= 'z')
+for (letter = 'a'; letter <= 'z'; letter++)
 {
-if (c != 'q' && c != 'e')
+if (letter != 'e' && letter != 'q')
+putchar(letter);
 }
-putchar(c);
-}
-c++;
-}
-putchar('\n');
+
+ putchar('\n');
+
 return (0);
 }
