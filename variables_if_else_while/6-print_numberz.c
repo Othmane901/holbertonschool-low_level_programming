@@ -2,7 +2,7 @@
 /**
 * main - prints 0-9 without char or printf/puts,
 * 
-/*
+(*
 * Return: 0 
 */
 int main(void)
