@@ -1,19 +1,17 @@
-#include “main.h”
+#include "main.h"
 /**
-* main – Entry point
+* main - prints "putchar"
 *
-* Return: Always 0 (Success)
+* Return: 0
 */
+
 int main(void)
 {
-_putchar(‘_’);
-_putchar(‘p’);
-_putchar(‘u’);
-_putchar(‘t’);
-_putchar(‘c’);
-_putchar(‘h’);
-_putchar(‘a’);
-_putchar(‘r’);
-_putchar(‘\n’);
+chat*message = "_putchar";
+int i = 0;
+do{
+_ptchat(message[i++]);
+} while (message[i] != '\0');
+_putchar('\n');
 return (0);
 }
