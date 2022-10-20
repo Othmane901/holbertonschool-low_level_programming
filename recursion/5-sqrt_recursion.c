@@ -1,29 +1,38 @@
 #include "main.h"
-int squareroot(int n, int i);
+
 /**
-* _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
-* @n: input
-* Return: Always 0 (Success)
+* _sqrt_recursion - function that returns the natural square root of a number
+*
+* @n: parameter defined in main, integer
+*
+* Return: -1, 0, 1 or i (sqrt of n found in tmp1)
 */
 int _sqrt_recursion(int n)
 {
 if (n < 0)
 return (-1);
+else if (n == 0)
+return (0);
+else if (n == 1)
+return (1);
 else
-return (squareroot(n, (n + 1) / 2));
+return (tmp1(n, 1));
 }
+
 /**
-* squareroot - checks if perfect square
-* @n: input
-* @i: counter
-* Return: if square root
+* tmp1 - subfunction for _sqrt_recursion
+*
+* @n: integer, from which sqrt is seeked
+* @i: sqrt of integer (to be incremented)
+*
+* Return: -1 or i;
 */
-int squareroot(int n, int i)
+int tmp1(int n, int i)
 {
-if (i < 1)
-return (-1);
-else if (i * i == n)
+if (n == (i * i))
 return (i);
+else if (n > (i * i))
+return (tmp1(n, i + 1));
 else
-return (squareroot(n, i - 1));
+return (-1);
 }
